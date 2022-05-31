@@ -1,5 +1,6 @@
 #!/bin/bash
 #This script is for a Magma Server for Minecraft 1.12.2 ONLY WORKS with java 8
+#IMPORTANT you will have to select ur OS, this is because java on debian gets different way to install.
 echo "Select your operating system (debian/ubuntu)"
 read os
 if [ "$os" = "debian" ]
