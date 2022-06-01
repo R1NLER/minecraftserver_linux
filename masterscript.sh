@@ -1,6 +1,5 @@
 #!/bin/bash
 #This script is for a Magma Server for Minecraft 1.12.2 ONLY WORKS with java 8
-#IMPORTANT you will have to select ur OS, this is because java on debian gets different way to install.
 echo "Select your operating system (debian/ubuntu)"
 read os
 if [ "$os" = "debian" ]
@@ -19,16 +18,15 @@ echo "Select the name for your server directory"
 read serverfolder
 mkdir $serverfolder
 cd $serverfolder
-echo "Downloading Magma.jar"
+echo "Downloading Magma"
 sleep 1s
 echo "."
 sleep 1s
 echo ".."
 sleep 1s
 echo "..."
-wget https://git.magmafoundation.org/api/v4/projects/7/packages/maven/org/magmafoundation/Magma/1.12.2-b8de1d0c/Magma-1.12.2-b8de1d0c.jar
+wget https://git.magmafoundation.org/api/v4/projects/7/packages/maven/org/magmafoundation/Magma/1.12.2-d8f2eae9/Magma-1.12.2-d8f2eae9.jar
 wget https://maven.minecraftforge.net/net/minecraftforge/forge/1.12.2-14.23.5.2860/forge-1.12.2-14.23.5.2860-installer.jar
-chmod +x Magma-1.12.2-b8de1d0c.jar
 echo "Downloaded Magma successfully"
 sleep 1s
 echo "."
@@ -51,7 +49,7 @@ then
     read ram1
     echo "Write the amount of maximum RAM (only numbers)"
     read ram2
-    java -Xms"$ram1"M -Xmx"$ram2"M -jar Magma-1.12.2-b8de1d0c.jar nogui  
+    java -Xms"$ram1"M -Xmx"$ram2"M -jar Magma-1.12.2-d8f2eae9.jar nogui  
     echo "."
     sleep 1s
     echo ".."
@@ -83,7 +81,7 @@ then
     java -Xms"$ram1"M -Xmx"$ram2"M -jar forge-1.12.2-14.23.5.2860.jar nogui
  
 else 
-    java -Xms512M -Xmx512M -jar Magma-1.12.2-b8de1d0c.jar nogui
+    java -Xms1024M -Xmx1024M -jar Magma-1.12.2-d8f2eae9.jar nogui
     echo "."
     sleep 1s
     echo ".."
