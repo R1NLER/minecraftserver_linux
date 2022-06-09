@@ -110,6 +110,6 @@ else
     echo ".."
     sleep 1s
     echo "..."
-    java -Xms512M -Xmx512M -jar forge-1.12.2-14.23.5.2860.jar nogui
+    java -Xms512M -Xmx512M -jar Magma-1.12.2-d8f2eae9.jar nogui
 
 fi
