@@ -1,0 +1,10 @@
+MultiversePortals commands, Multiverse-Core needed
+/mvp wand enable 
+/mvp wand disable #if WorldEdit is neccesary
+//mvp wand 
+/mvp create nameportal
+/mvp create nameportal2
+/mvp modify dest p:portalname1 (if portalname2 selected automatically)
+/mvp select portalname (to select another portal)
+/mvp remove nameportal1
+/mvp list (list of all portals)
