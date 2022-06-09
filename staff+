@@ -1,0 +1,13 @@
+List of Staff+ useful commands
+/staff - enable/disable staff mode
+/notes Player Note - to add notes on a player (like suspect to use cheats)
+/sc - enable staff chat
+/report Player Motive - reports a player to staff, it doesn't work on OP players
+/warn Player message - to send a warning to a player
+/chat clear - cleans all players chat on server
+/chat toggle - chat enable/disable for players
+/chat slow seconds - slows chat for the amount of seconds selected
+/ticket message - send ticket to staff
+/ticket respond Player/TicketNumber message - to respond players
+/ticket close ticketID reason - to close tickets
+/revive Player - restore last inventory
