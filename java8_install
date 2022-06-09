@@ -1,1 +1,15 @@
-sudo apt update && sudo apt install openjdk-8-jre
+#!/bin/bash
+#JAVA 8 INSTALL
+echo "Select your operating system (debian/ubuntu)"
+read os
+if [ "$os" = "debian" ]
+then
+    echo "deb http://deb.debian.org/debian/ sid main" >> /etc/apt/sources.list 
+    sudo apt update && sudo apt install openjdk-8-jre -y
+    sudo apt install wget
+ 
+else 
+    sudo apt update && sudo apt install openjdk-8-jre -y
+    sudo apt install wget
+
+fi
