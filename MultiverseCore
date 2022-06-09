@@ -1,0 +1,12 @@
+Multiverse Portals Commands
+/mvp wand enable 
+/mvp wand disable #if WorldEdit is neccesary
+/mvp wand toggle
+/mv create WorldName Type – Create a specific world type on the server.
+/mv import [WorldName] [Type] – Import an existing world for use.
+/mv set spawn – Set the respawn point for a world.
+/mv tp [Player] [World] – Teleport a player into a different world.
+/mv unload [World] – Unloads a world from the server.
+/mv load [World] – Enables an unloaded world.
+/mv gamerule [Rule] [Value] [WorldName] – Sets a gamerule for a specific world.
+/mv create WorldName Type -g VoidWorld - Needs VoidWorld already installed, create an empty world
