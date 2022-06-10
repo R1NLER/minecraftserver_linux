@@ -5,12 +5,13 @@ read os
 if [ "$os" = "debian" ]
 then
     echo "deb http://deb.debian.org/debian/ sid main" >> /etc/apt/sources.list 
-    sudo apt update && sudo apt install openjdk-8-jre -y
-    sudo apt install wget
+    sudo apt update && sudo apt install openjdk-8-jre -y | apt update && apt upgrade -y
+    #sudo apt install wget #if needed, uncomment
  
 else 
-    sudo apt update && sudo apt install openjdk-8-jre -y
-    sudo apt install wget
+    sudo apt update && sudo apt install openjdk-8-jre -y | apt update && apt upgrade -y
+
+    #sudo apt install wget #if needed, uncomment
 
 fi
 
@@ -26,7 +27,7 @@ echo ".."
 sleep 1s
 echo "..."
 wget https://git.magmafoundation.org/api/v4/projects/7/packages/maven/org/magmafoundation/Magma/1.12.2-d8f2eae9/Magma-1.12.2-d8f2eae9.jar
-wget https://maven.minecraftforge.net/net/minecraftforge/forge/1.12.2-14.23.5.2860/forge-1.12.2-14.23.5.2860-installer.jar
+#wget https://maven.minecraftforge.net/net/minecraftforge/forge/1.12.2-14.23.5.2860/forge-1.12.2-14.23.5.2860-installer.jar #uncomment this line if need forge
 echo "Downloaded Magma successfully"
 sleep 1s
 echo "."
@@ -41,7 +42,7 @@ sleep 1s
 echo ".."
 sleep 1s
 echo "..."
-echo -e "Do you want to add RAM memory to your server? (y/n) default:512M"
+echo -e "Do you want to add RAM memory to your server? (y/n) default:1024M"
 read ramcheck
 if [ "$ramcheck" = "y" ]
 then
@@ -55,22 +56,23 @@ then
     echo ".."
     sleep 1s
     echo "..."
-    #sed -i 's/eula=false/eula=true/' eula.txt #EULA TRUE
-    echo -e "Installing Forge"
-    sleep 1s
-    echo "."
-    sleep 1s
-    echo ".."
-    sleep 1s
-    echo "..."
-    java -jar forge-1.12.2-14.23.5.2860-installer.jar --installServer
-    echo -e "Installed Forge"
-    sleep 1s
-    echo "."
-    sleep 1s
-    echo ".."
-    sleep 1s
-    echo "..."
+    sed -i 's/eula=false/eula=true/' eula.txt #EULA TRUE
+    #uncomment next lines if u need to install forge
+    #echo -e "Installing Forge"
+    #sleep 1s
+    #echo "."
+    #sleep 1s
+    #echo ".."
+    #sleep 1s
+    #echo "..."
+    #java -jar forge-1.12.2-14.23.5.2860-installer.jar --installServer
+    #echo -e "Installed Forge"
+    #sleep 1s
+    #echo "."
+    #sleep 1s
+    #echo ".."
+    #sleep 1s
+    #echo "..."
     echo "Starting your Minecraft Magma Server"
     sleep 1s
     echo "."
@@ -78,7 +80,7 @@ then
     echo ".."
     sleep 1s
     echo "..."
-    java -Xms"$ram1"M -Xmx"$ram2"M -jar forge-1.12.2-14.23.5.2860.jar nogui
+    java -Xms"$ram1"M -Xmx"$ram2"M -jar Magma-1.12.2-d8f2eae9.jar nogui 
  
 else 
     java -Xms1024M -Xmx1024M -jar Magma-1.12.2-d8f2eae9.jar nogui
@@ -87,22 +89,23 @@ else
     echo ".."
     sleep 1s
     echo "..."
-    #sed -i 's/eula=false/eula=true/' eula.txt #EULA TRUE
-    echo -e "Installing Forge"
-    sleep 1s
-    echo "."
-    sleep 1s
-    echo ".."
-    sleep 1s
-    echo "..."
-    java -jar forge-1.12.2-14.23.5.2860-installer.jar --installServer
-    echo -e "Installed Forge"
-    sleep 1s
-    echo "."
-    sleep 1s
-    echo ".."
-    sleep 1s
-    echo "..."
+    sed -i 's/eula=false/eula=true/' eula.txt #EULA TRUE
+      #uncomment next lines if u need to install forge
+    #echo -e "Installing Forge"
+    #sleep 1s
+    #echo "."
+    #sleep 1s
+    #echo ".."
+    #sleep 1s
+    #echo "..."
+    #java -jar forge-1.12.2-14.23.5.2860-installer.jar --installServer
+    #echo -e "Installed Forge"
+    #sleep 1s
+    #echo "."
+    #sleep 1s
+    #echo ".."
+    #sleep 1s
+    #echo "..."
     echo "Starting your Minecraft Magma Server"
     sleep 1s
     echo "."
@@ -110,6 +113,6 @@ else
     echo ".."
     sleep 1s
     echo "..."
-    java -Xms512M -Xmx512M -jar Magma-1.12.2-d8f2eae9.jar nogui
+    java -Xms1024M -Xmx1024M -jar Magma-1.12.2-d8f2eae9.jar nogui
 
 fi
