@@ -1,6 +1,6 @@
 # minecraftserver_linux
-Scripts to create a minecraft server on linux automatically, it works with any kind of server but on this case will be on a MAGMA SERVER, so download all the .jar files that you need from other websites.
+Scripts to create a minecraft server on linux automatically, it works with any kind of server.
 IMPORTANT
-Always remember to check compatibility of Java with the server you want to deploy.
-Also you will have to do wget to all your .jar files that if they are not on your computer.
+This script will download versión 1.12.2 ONLY.
+The servers will run on a 'screen' service that will be running in the background. Please refer to the screen documentation for more information on this.
 Enjoy!
